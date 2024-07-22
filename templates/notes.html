@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note List</title>
+</head>
+<body>
+    <h1>Note List</h1>
+    <ul>
+        {% for notes in note %}
+        <li><a href="{% url 'detail' notes.pk %}">{{notes.title}} by {{notes.content}}</li></a>
+        {% endfor %}
+        <a href="{% url 'create' %}">
+            Добавить Заметку</a>
+    </ul>
+</body>
+</html>

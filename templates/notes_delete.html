@@ -1,0 +1,7 @@
+{% block content %}
+    <h1>Delete Note</h1>
+    <form action="" method="post">{% csrf_token %}
+      <p>Вы действительно хотите удалить "{{ Note.title }}"?</p>
+      <input type="submit" value="Confirm" />
+    </form>
+{% endblock content %}
